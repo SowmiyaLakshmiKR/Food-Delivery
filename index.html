@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FoodExpress</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>FoodExpress</h1>
+  <p>Delicious food delivered to your door</p>
+  <nav>
+    <a href="#restaurants">Restaurants</a>
+    <a href="#cart">Cart (<span id="count">0</span>)</a>
+  </nav>
+</header>
+
+<section id="restaurants">
+  <h2>Restaurants</h2>
+
+  <div class="restaurant">
+    <h3>🍕 Pizza Palace</h3>
+
+    <div class="food">
+      <h4>Margherita Pizza</h4>
+      <p>₹249</p>
+      <button onclick="addFood('Margherita Pizza',249)">
+        Add
+      </button>
+    </div>
+
+    <div class="food">
+      <h4>Farmhouse Pizza</h4>
+      <p>₹349</p>
+      <button onclick="addFood('Farmhouse Pizza',349)">
+        Add
+      </button>
+    </div>
+  </div>
+
+  <div class="restaurant">
+    <h3>🍔 Burger Hub</h3>
+
+    <div class="food">
+      <h4>Cheese Burger</h4>
+      <p>₹199</p>
+      <button onclick="addFood('Cheese Burger',199)">
+        Add
+      </button>
+    </div>
+
+    <div class="food">
+      <h4>Veg Burger</h4>
+      <p>₹149</p>
+      <button onclick="addFood('Veg Burger',149)">
+        Add
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="cart">
+  <h2>Your Cart</h2>
+  <div id="items"></div>
+  <h3>Total: ₹<span id="total">0</span></h3>
+  <button onclick="placeOrder()">Place Order</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
